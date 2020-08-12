@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="资源文件\feature_tracker">
+      <UniqueIdentifier>{50ff5eec-0c19-403e-bc44-15739b87eb7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\camodcalib">
+      <UniqueIdentifier>{08be633d-cf42-4de8-861d-df4d2235e94f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\estimator">
+      <UniqueIdentifier>{93260dc4-472c-48b0-9356-c2d7eb3c206f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\initial">
+      <UniqueIdentifier>{88323ea8-91de-4c54-8968-f8386eb8578c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\utility">
+      <UniqueIdentifier>{04debde6-c210-47bc-864c-f0ea9bae8abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\backend">
+      <UniqueIdentifier>{417cd778-c6c4-422c-9520-f1a6b92012a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="feature_tracker.h">
+      <Filter>资源文件\feature_tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>资源文件\camodcalib</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraFactory.h">
+      <Filter>资源文件\camodcalib</Filter>
+    </ClInclude>
+    <ClInclude Include="PinholeCamera.h">
+      <Filter>资源文件\camodcalib</Filter>
+    </ClInclude>
+    <ClInclude Include="parameters.h">
+      <Filter>资源文件\feature_tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>资源文件\feature_tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="feature_manager.h">
+      <Filter>资源文件\estimator</Filter>
+    </ClInclude>
+    <ClInclude Include="Estimator.h">
+      <Filter>资源文件\estimator</Filter>
+    </ClInclude>
+    <ClInclude Include="edge.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="edge_imu.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="edge_prior.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="edge_reprojection.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="imu_integration.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="loss_function.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="problem.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_pose.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="backend.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="eigen_types.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_inverse_depth.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_point_xyz.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_speedbias.h">
+      <Filter>资源文件\backend</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="feature_tracker.cpp">
+      <Filter>资源文件\feature_tracker</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>资源文件\camodcalib</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraFactory.cpp">
+      <Filter>资源文件\camodcalib</Filter>
+    </ClCompile>
+    <ClCompile Include="PinholeCamera.cpp">
+      <Filter>资源文件\camodcalib</Filter>
+    </ClCompile>
+    <ClCompile Include="parameters.cpp">
+      <Filter>资源文件\feature_tracker</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>资源文件\feature_tracker</Filter>
+    </ClCompile>
+    <ClCompile Include="feature_manager.cpp">
+      <Filter>资源文件\estimator</Filter>
+    </ClCompile>
+    <ClCompile Include="Estimator.cpp">
+      <Filter>资源文件\estimator</Filter>
+    </ClCompile>
+    <ClCompile Include="edge.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="edge_imu.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="edge_prior.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="edge_reprojection.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="imu_integration.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="loss_function.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="problem.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="vertex.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="vertex_pose.cpp">
+      <Filter>资源文件\backend</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
