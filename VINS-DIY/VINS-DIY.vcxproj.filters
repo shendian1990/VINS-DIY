@@ -99,6 +99,12 @@
     <ClInclude Include="vertex_speedbias.h">
       <Filter>资源文件\backend</Filter>
     </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>资源文件\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="integration_base.h">
+      <Filter>资源文件\utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="feature_tracker.cpp">
