@@ -1,5 +1,7 @@
 #include "System.h"
 
+#include "Estimator.h"
+
 System::System(string sConfig_file_)
     :bStart_backend(true)
 {
@@ -161,6 +163,56 @@ void System::PubImageData(double dStampSec, cv::Mat& img)
     }
 }
 
+vector<pair<vector<ImuConstPtr>, ImgConstPtr>> System::getMeasurements()
+{
+    vector<pair<vector<ImuConstPtr>, ImgConstPtr>> measurements;
+
+    while (true)
+    {
+        if (imu_buf.empty() || feature_buf.empty())
+        {
+            // cerr << "1 imu_buf.empty() || feature_buf.empty()" << endl;
+            return measurements;
+        }
+
+        if (!(imu_buf.back()->header > feature_buf.front()->header + estimator.td))
+        {
+            cerr << "wait for imu, only should happen at the beginning sum_of_wait: "
+                << sum_of_wait << endl;
+            sum_of_wait++;
+            return measurements;
+        }
+
+        if (!(imu_buf.front()->header < feature_buf.front()->header + estimator.td))
+        {
+            cerr << "throw img, only should happen at the beginning" << endl;
+            feature_buf.pop();
+            continue;
+        }
+        ImgConstPtr img_msg = feature_buf.front();
+        feature_buf.pop();
+
+        vector<ImuConstPtr> IMUs;
+        while (imu_buf.front()->header < img_msg->header + estimator.td)
+        {
+            IMUs.emplace_back(imu_buf.front());
+            imu_buf.pop();
+        }
+        // cout << "1 getMeasurements IMUs size: " << IMUs.size() << endl;
+        IMUs.emplace_back(imu_buf.front());
+        if (IMUs.empty()) {
+            cerr << "no imu between two image" << endl;
+        }
+        // cout << "1 getMeasurements img t: " << fixed << img_msg->header
+        //     << " imu begin: "<< IMUs.front()->header 
+        //     << " end: " << IMUs.back()->header
+        //     << endl;
+        measurements.emplace_back(IMUs, img_msg);
+    }
+    return measurements;
+}
+
+
 void System::PubImuData(double dStampSec, const Eigen::Vector3d& vGyr,
     const Eigen::Vector3d& vAcc)
 {
@@ -295,7 +347,7 @@ void System::ProcessBackEnd()
 
 void System::Draw()
 {
-    // create pangolin window and plot the trajectory
+    /*// create pangolin window and plot the trajectory
     pangolin::CreateWindowAndBind("Trajectory Viewer", 1024, 768);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
@@ -345,5 +397,5 @@ void System::Draw()
         }
         pangolin::FinishFrame();
         Sleep(5);
-    }
+    }*/
 }

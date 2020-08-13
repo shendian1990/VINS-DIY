@@ -36,12 +36,12 @@ namespace myslam {
             /// º∆À„—≈ø…±»
             virtual void ComputeJacobians() override;
 
-            //    void SetTranslationImuFromCamera(Eigen::Quaterniond &qic_, Vec3 &tic_);
+            void SetTranslationImuFromCamera(Eigen::Quaterniond &qic_, Vec3 &tic_);
 
         private:
             //Translation imu from camera
-        //    Qd qic;
-        //    Vec3 tic;
+            Qd qic;
+            Vec3 tic;
 
             //measurements
             Vec3 pts_i_, pts_j_;

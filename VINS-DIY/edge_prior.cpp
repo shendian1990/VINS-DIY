@@ -3,6 +3,7 @@
 //
 
 #include <sophus/se3.hpp>
+#include <sophus/so3.hpp>
 
 #include "edge_prior.h"
 #include "vertex_pose.h"

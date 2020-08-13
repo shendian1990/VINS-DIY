@@ -45,10 +45,10 @@ namespace myslam {
         //    residual_ = information_ * residual_;   // remove information here, we multi information matrix in problem solver
         }
 
-        //void EdgeReprojection::SetTranslationImuFromCamera(Eigen::Quaterniond &qic_, Vec3 &tic_) {
-        //    qic = qic_;
-        //    tic = tic_;
-        //}
+        void EdgeReprojection::SetTranslationImuFromCamera(Eigen::Quaterniond &qic_, Vec3 &tic_) {
+            qic = qic_;
+            tic = tic_;
+        }
 
         void EdgeReprojection::ComputeJacobians() {
             double inv_dep_i = verticies_[0]->Parameters()[0];

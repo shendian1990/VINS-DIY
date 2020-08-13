@@ -29,6 +29,7 @@ namespace myslam {
 
             // propagate noise
             A_.block<3, 3>(0, 0) = dR.inverse().matrix();
+            
             B_.block<3, 3>(0, 0) = SO3d::JacobianR(dR.log());
 
             A_.block<3, 3>(3, 0) = -delta_r_.matrix() * SO3d::hat(acc - ba_) * dt;

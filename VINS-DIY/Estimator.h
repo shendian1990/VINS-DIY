@@ -3,14 +3,14 @@
 #include "parameters.h"
 #include "feature_manager.h"
 
-#include "initial/solve_5pts.h"
-#include "initial/initial_sfm.h"
-#include "initial/initial_alignment.h"
-#include "initial/initial_ex_rotation.h"
+#include "solve_5pts.h"
+#include "initial_sfm.h"
+#include "initial_alignment.h"
+#include "initial_ex_rotation.h"
 
-#include "factor/integration_base.h"
+#include "integration_base.h"
 
-#include "backend/problem.h"
+#include "problem.h"
 
 #include <unordered_map>
 #include <queue>

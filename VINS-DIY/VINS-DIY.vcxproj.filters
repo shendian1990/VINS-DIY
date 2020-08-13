@@ -105,6 +105,18 @@
     <ClInclude Include="integration_base.h">
       <Filter>资源文件\utility</Filter>
     </ClInclude>
+    <ClInclude Include="initial_alignment.h">
+      <Filter>资源文件\initial</Filter>
+    </ClInclude>
+    <ClInclude Include="initial_ex_rotation.h">
+      <Filter>资源文件\initial</Filter>
+    </ClInclude>
+    <ClInclude Include="initial_sfm.h">
+      <Filter>资源文件\initial</Filter>
+    </ClInclude>
+    <ClInclude Include="solve_5pts.h">
+      <Filter>资源文件\initial</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="feature_tracker.cpp">
@@ -160,6 +172,24 @@
     </ClCompile>
     <ClCompile Include="vertex_pose.cpp">
       <Filter>资源文件\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="CurveFitting.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TestMonoBA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="initial_alignment.cpp">
+      <Filter>资源文件\initial</Filter>
+    </ClCompile>
+    <ClCompile Include="initial_ex_alignment.cpp">
+      <Filter>资源文件\initial</Filter>
+    </ClCompile>
+    <ClCompile Include="initial_sfm.cpp">
+      <Filter>资源文件\initial</Filter>
+    </ClCompile>
+    <ClCompile Include="solve_5pts.cpp">
+      <Filter>资源文件\initial</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

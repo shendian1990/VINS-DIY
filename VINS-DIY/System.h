@@ -10,7 +10,7 @@
 // #include <opencv2/opencv.hpp>
 #include <pangolin/pangolin.h>
 
-//#include "estimator.h"
+#include "Estimator.h"
 #include "parameters.h"
 #include "feature_tracker.h"
 
@@ -74,7 +74,7 @@ private:
     bool init_pub = 0;
 
     //estimator
-    //Estimator estimator;
+    Estimator estimator;
 
     std::condition_variable con;
     double current_time = -1;
